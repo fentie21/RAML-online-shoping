@@ -1,0 +1,87 @@
+#%RAML 1.0 Extension
+extends: online_shoping.raml
+usage: for admin tasks
+/products:
+  get:
+  post:
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+                            [
+              {
+                "product_id": 12,
+                "name": "Hp",
+                "category_id": 4321,
+                "description": "cor i 5",
+                "video_url": "www.Hp.com",
+                "price": 4000
+              },
+              {
+                "product_id": 22,
+                "name": "dell",
+                "category_id": 4321,
+                "description": "cor i 3",
+                "video_url": "www.dell.com",
+                "price": 3000 
+              },
+
+              {
+                "product_id": 32,
+                "name": "phone",
+                "category_id": 4343,
+                "description": "iphone pro",
+                "video_url": "www.iphonr.com",
+                "price": 2000 
+              } 
+              ]
+  delete:
+  /{product_id}:
+    get:
+    post:
+      responses:
+        201:
+          body:
+            application/json:
+              example:
+                   {
+                "product_id": 120,
+                "name": "Hp",
+                "category_id": 3421,
+                "description": "cor i 3",
+                "video_url": "www.Hp.com",
+                "price": 4000
+                }
+    delete:
+/orders:
+  get:
+  post:
+  put:
+  delete:
+  /{order_id}:
+    get:
+    post:
+    put:
+    delete:
+/users:
+  get:
+  post:
+  put:
+  delete:
+  /{user_id}:
+    get:
+    post:
+    put:
+    delete:
+/category:
+  get:
+  post:
+  put:
+  delete:
+  /{category_id}:
+    get:
+    post:
+    put:
+    delete:
+      
